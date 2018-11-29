@@ -1,0 +1,81 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#game {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 1%;
+}
+
+#container {
+    background-color: bisque;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: wheat 2% solid;
+    border-radius: 2%;
+    padding: 2%;
+}
+.column {
+    background-color: bisque;
+    z-index: 1;
+}
+.column:hover {
+    background-color: beige;
+    border-radius: 15px;
+}
+
+.slot {
+    border-radius: 50%;
+    width: 11.5vh;
+    height: 11.5vh;
+    flex-basis: auto;
+    margin: 1px 1px;
+    z-index: 4;
+}
+
+.player1 {
+    background-color: cadetblue;
+}
+
+.player2 {
+    background-color: coral;
+}
+.anim {
+    position: absolute;
+    transform: translateY(-66vh);
+}
+.animIn {
+    z-index: 3;
+    position: absolute;
+    transform: translateY(0);
+    transition: transform 1s;
+    transition-timing-function: cubic-bezier(0.55, 1.95, 0.03, 0.32);
+}
+h1 {
+    width: 100%;
+    height: 12vh;
+    font-family: monospace;
+    text-align: center;
+    font-size: 9.5vh;
+    margin: 10px;
+}
+.ui {
+    display: none;
+}
+@media screen and (max-aspect-ratio: 9/11) {
+    .slot {
+        width: 12.5vw;
+        height: 12.5vw;
+    }
+    h1 {
+        font-size: 12vw;
+        height: 13vw;
+    }
+}
